@@ -21,18 +21,18 @@ describe("Test Start", () => {
         expect(isSolved).toBeTruthy();
         done();
     }, 108000);
-    test('Gets final result page', async (done) => {
-        let isFinalPageExists;
-        try {
-            if (fs.existsSync(path.join(__dirname, '..', './data', 'response.png'))) {
-                isFinalPageExists = true;
-            } else {
-                isFinalPageExists = false;
-            }
-        } catch (err) {
-            console.error(err);
-        }
-        expect(isFinalPageExists).toBeTruthy();
-        done();
-    })
+    // test('Gets final result page', async (done) => {
+    //     let isFinalPageExists;
+    //     try {
+    //         if (fs.existsSync(path.join(__dirname, '..', './data', 'response.png'))) {
+    //             isFinalPageExists = true;
+    //         } else {
+    //             isFinalPageExists = false;
+    //         }
+    //     } catch (err) {
+    //         console.error(err);
+    //     }
+    //     expect(isFinalPageExists).toBeTruthy();
+    //     done();
+    // })
 });
