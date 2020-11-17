@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - '14'
+dist: trusty
+env:
+  - CAPTCHA_API=${CAPTCHA_API}
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install
+script:
+  - npm run test
