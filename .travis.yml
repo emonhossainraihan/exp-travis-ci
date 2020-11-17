@@ -1,13 +1,16 @@
 language: node_js
 node_js:
-  - '14'
+- '14'
 dist: trusty
 env:
-  - CAPTCHA_API=${CAPTCHA_API}
+  matrix:
+  - TEST="test"
+  global:
+    secure: cJc3kcfEg0Fw//ekRyj6wm659Gzmh11dI0cJszNOQ929bhwd2XQiDtxgp9lvkAiTRhiuw7xAzP/N2R65DRKDDBTFolbxeRkzvPTaBM02WlNlSsXE+bFVaQPZT//Y5v2F5fAOPasCh3mtBbHb5zpnuMSH3QaqxsK3lcoHRN8Z2qG4eHLWisd7OELAJShgqG818MtTwYZvkdGZezyRbYLPDFJ3WgyX7dgKXlsC0szBrRfshz/zFKL8/xVN1kvvz0Euw16TVookZ+tnyg1PUBShFOTZczMQbs5mHLKTr4ImD7APG9uxBzTUA0238X87LoMuooFznPek6YN3umVQTBpGQql5uApZSRoVsFYR7aXlnGLMdGZQuz+W7B7oEmIBDrhqc8AGS6RZqyWXM2DJqmPNMqi+cIS3420t4fzsWzxRejugqDsRdwehAt1UY4oTo811cRFtRCDRr+eilavYYHJCXKPTb3vqD0hMjZkSI52VRLZ5Tkl5hgcPfyymLhK82DZDO1BJaxVVFEz8gP61OubabRuJn6qHC+umAvUg1UDv3dvJxmvXHwAwqTO43UtWOWm0+AS9UwrAaLMGwKE0AGpNWCVdBSSDQ5+9jkCWN43ly3uYx76kplRd5qVzX3iq3q5yG+hczrI07l5lQ43jN4ZYcjWCwsiMVQgF3iqmBx4Ho2k=
 cache:
   directories:
-    - node_modules
+  - node_modules
 install:
-  - npm install
+- npm install
 script:
-  - npm run test
+- npm run test
