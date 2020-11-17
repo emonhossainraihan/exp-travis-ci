@@ -42,7 +42,7 @@ class CustomPage {
         const selectElement = await this.page.$('.recaptcha-success')
         const successMessage = selectElement && await this.page.evaluate(el => el.innerText, selectElement);
         if (successMessage && successMessage === "Verification Success... Hooray!") {
-            await this.page.screenshot({ path: path.join(__dirname, '..', './data', 'response.png'), fullPage: true })
+            //await this.page.screenshot({ path: path.join(__dirname, '..', './data', 'response.png'), fullPage: true })
             return true
         } else {
             return false
