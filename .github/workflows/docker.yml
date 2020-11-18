@@ -1,0 +1,15 @@
+name: Docker Image
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: docker-compose build
+      - name: Run
+        run: docker-compose up
+        env:
+          CAPTCHA_API: ${{ secrets.CAPTCHA_API }}

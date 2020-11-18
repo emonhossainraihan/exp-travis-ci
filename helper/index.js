@@ -16,7 +16,9 @@ class CustomPage {
     async init() {
         // start the browser 
         if (!this.browser) {
-            this.browser = await puppeteer.launch({});
+            this.browser = await puppeteer.launch({
+                args: ['--no-sandbox', '--disable-dev-shm-usage'],
+            });
             this.page = await this.browser.newPage();
 
         }
